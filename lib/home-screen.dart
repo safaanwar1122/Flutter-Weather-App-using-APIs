@@ -102,8 +102,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                   Container(
-                                    height: 250,
-                                    width: 250,
+                                    height: 200,
+                                    width: 200,
                                     decoration: BoxDecoration(
                                         image: DecorationImage(
                                       image: AssetImage('images/cloud.png'),
@@ -113,32 +113,29 @@ class _HomeScreenState extends State<HomeScreen> {
                                     height: 5,
                                   ),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Column(
                                         children: [
                                           Text(
-                                            'Sıcaklık',
+                                            'Temperature',
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 17,
                                             ),
                                           ),
                                           Text(
-                                            '${((snapshot.data!.main.temp - 32 * 5) / 9).toStringAsFixed(2)}',
+                                            '${((snapshot.data!.main.temp - 32 * 5) / 9).toStringAsFixed(2)}\u00B0C',
                                             style: const TextStyle(
                                               color: Colors.white,
                                               fontSize: 21,
                                               fontWeight: FontWeight.w700,
                                             ),
                                           ),
-                                          const SizedBox(
-                                            width: 15
-                                          ),
+                                          const SizedBox(width: 15),
                                           Column(
                                             children: [
                                               Text(
-                                                'Rüzgar',
+                                                'Wind speed',
                                                 style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 17,
@@ -158,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               Column(
                                                 children: [
                                                   Text(
-                                                    'Nem',
+                                                    'Humidity',
                                                     style: TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 17,
@@ -172,7 +169,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     style: const TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 21,
-                                                      fontWeight: FontWeight.w700,
+                                                      fontWeight:
+                                                          FontWeight.w700,
                                                     ),
                                                   )
                                                 ],
@@ -181,9 +179,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 height: 5,
                                               ),
                                               ElevatedButton(
-                                                onPressed: () {},
+                                                onPressed: () {
+
+                                                },
                                                 child: Text(
-                                                    'Haftalık Hava Durumunu Gör'),
+                                                    'See the Weekly Weather Forecast'),
                                                 style: ElevatedButton.styleFrom(
                                                   primary: Colors
                                                       .deepPurpleAccent[100],
