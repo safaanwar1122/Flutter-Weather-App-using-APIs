@@ -154,6 +154,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                               ),
                                               Column(
                                                 children: [
+                                                  Text(snapshot!.data!.coord.lat
+                                                      .toString()),
+                                                  Text(
+                                                    snapshot.data!.weather[0]
+                                                        .description
+                                                        .toString(), // access array [{ with sqaure and curly brackets}]
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 1,
+                                                  ),
                                                   Text(
                                                     'Humidity',
                                                     style: TextStyle(
@@ -179,9 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 height: 5,
                                               ),
                                               ElevatedButton(
-                                                onPressed: () {
-
-                                                },
+                                                onPressed: () {},
                                                 child: Text(
                                                     'See the Weekly Weather Forecast'),
                                                 style: ElevatedButton.styleFrom(
