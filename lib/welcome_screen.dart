@@ -10,6 +10,24 @@ class WelcomToWeatherScreen extends StatefulWidget {
 class _WelcomToWeatherScreenState extends State<WelcomToWeatherScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: const Color(0xFF676BD0),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: Center(
+          child: Container(
+            height: 500,
+            width: 500,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.contain,
+                image: AssetImage('images/weather.png'),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
