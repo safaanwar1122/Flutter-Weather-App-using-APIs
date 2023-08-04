@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+
+import 'home-screen.dart';
 
 class WelcomToWeatherScreen extends StatefulWidget {
   const WelcomToWeatherScreen({Key? key}) : super(key: key);
@@ -8,6 +12,16 @@ class WelcomToWeatherScreen extends StatefulWidget {
 }
 
 class _WelcomToWeatherScreenState extends State<WelcomToWeatherScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Future.delayed(
+        Duration(seconds: 3),
+        () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomeScreen())));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
