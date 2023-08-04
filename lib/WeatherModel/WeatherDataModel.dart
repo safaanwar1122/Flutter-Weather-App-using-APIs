@@ -7,19 +7,20 @@ import 'Sys.dart';
 
 class WeatherDataModel {
   WeatherDataModel({
-    required  this.coord,
-    required  this.weather,
-    required  this.base,
-    required  this.main,
-    required  this.visibility,
-    required  this.wind,
-    required  this.clouds,
-    required  this.dt,
-    required  this.sys,
-    required  this.timezone,
-    required  this.id,
-    required  this.name,
-    required  this.cod,});
+    required this.coord,
+    required this.weather,
+    required this.base,
+    required this.main,
+    required this.visibility,
+    required this.wind,
+    required this.clouds,
+    required this.dt,
+    required this.sys,
+    required this.timezone,
+    required this.id,
+    required this.name,
+    required this.cod,
+  });
 
   WeatherDataModel.fromJson(dynamic json) {
     coord = (json['coord'] != null ? Coord.fromJson(json['coord']) : null)!;
@@ -43,9 +44,9 @@ class WeatherDataModel {
   }
   late Coord coord;
   late List<Weather> weather;
- late String base;
-  late  Main main;
-  late  int visibility;
+  late String base;
+  late Main main;
+  late int visibility;
   late Wind wind;
   late Clouds clouds;
   late int dt;
@@ -84,5 +85,4 @@ class WeatherDataModel {
     map['cod'] = cod;
     return map;
   }
-
 }
